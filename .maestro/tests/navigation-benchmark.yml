@@ -1,0 +1,20 @@
+appId: com.navigationbenchmark
+---
+- launchApp
+- assertVisible: "Navigation Benchmark"
+- tapOn: "JS Stack"
+- assertVisible: "Home Screen"
+- tapOn: "Go to Details"
+- assertVisible: "Details Screen"
+- tapOn: "Go to Profile"
+- assertVisible: "Profile Screen"
+- tapOn: "Go to Settings"
+- assertVisible: "Settings Screen"
+- tapOn: "Native Stack"
+- assertVisible: "Home Screen"
+- tapOn: "Go to Details"
+- assertVisible: "Details Screen"
+- tapOn: "Go to Profile"
+- assertVisible: "Profile Screen"
+- tapOn: "Go to Settings"
+- assertVisible: "Settings Screen" 
