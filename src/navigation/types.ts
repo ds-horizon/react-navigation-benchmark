@@ -3,6 +3,6 @@ export type RootStackParamList = {
   Details: undefined;
   Profile: undefined;
   Settings: undefined;
-  ScreenA: undefined;
+  ScreenA: { fromScreenB?: boolean } | undefined;
   ScreenB: undefined;
 }; 

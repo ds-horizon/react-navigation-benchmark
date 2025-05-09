@@ -6,7 +6,7 @@ import { RootStackParamList } from './types';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-export const JSStackNavigator = () => {
+export const JSStackNavigator = ({ navigationType }: { navigationType: 'js' | 'native' }) => {
   return (
     <Stack.Navigator
       initialRouteName="ScreenA"
@@ -14,14 +14,18 @@ export const JSStackNavigator = () => {
         headerStyle: {
           backgroundColor: '#f4511e',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#000',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
       }}
     >
-      <Stack.Screen name="ScreenA" component={ScreenA} />
-      <Stack.Screen name="ScreenB" component={ScreenB} />
+      <Stack.Screen name="ScreenA">
+        {props => <ScreenA {...props} navigationType={navigationType} />}
+      </Stack.Screen>
+      <Stack.Screen name="ScreenB">
+        {props => <ScreenB {...props} navigationType={navigationType} />}
+      </Stack.Screen>
     </Stack.Navigator>
   );
 }; 

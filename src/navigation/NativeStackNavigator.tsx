@@ -6,7 +6,7 @@ import { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export const NativeStackNavigator = () => {
+export const NativeStackNavigator = ({ navigationType }: { navigationType: 'js' | 'native' }) => {
   return (
     <Stack.Navigator
       initialRouteName="ScreenA"
@@ -20,8 +20,12 @@ export const NativeStackNavigator = () => {
         },
       }}
     >
-      <Stack.Screen name="ScreenA" component={ScreenA} />
-      <Stack.Screen name="ScreenB" component={ScreenB} />
+      <Stack.Screen name="ScreenA">
+        {props => <ScreenA {...props} navigationType={navigationType} />}
+      </Stack.Screen>
+      <Stack.Screen name="ScreenB">
+        {props => <ScreenB {...props} navigationType={navigationType} />}
+      </Stack.Screen>
     </Stack.Navigator>
   );
 }; 

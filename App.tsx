@@ -5,18 +5,37 @@
  * @format
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { JSStackNavigator } from './src/navigation/JSStackNavigator';
 import { NativeStackNavigator } from './src/navigation/NativeStackNavigator';
+import { PerformanceTracker } from '@d11/marco';
+
+PerformanceTracker.configure({ persistToFile: true });
+
+const NAV_TYPE_KEY = 'navigationType';
 
 const App = () => {
   const [navigationType, setNavigationType] = useState<'js' | 'native'>('js');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AsyncStorage.getItem(NAV_TYPE_KEY).then(value => {
+      if (value === 'js' || value === 'native') {
+        setNavigationType(value);
+      }
+      setLoading(false);
+    });
+  }, []);
 
   const handleNavigationTypeChange = (type: 'js' | 'native') => {
     setNavigationType(type);
+    AsyncStorage.setItem(NAV_TYPE_KEY, type);
   };
+
+  if (loading) return null;
 
   return (
     <NavigationContainer>
@@ -55,9 +74,9 @@ const App = () => {
           </View>
         </View>
         {navigationType === 'js' ? (
-          <JSStackNavigator />
+          <JSStackNavigator navigationType="js" />
         ) : (
-          <NativeStackNavigator />
+          <NativeStackNavigator navigationType="native" />
         )}
       </View>
     </NavigationContainer>
