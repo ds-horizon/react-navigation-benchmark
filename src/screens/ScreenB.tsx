@@ -22,14 +22,19 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
 
   return (
     <PerformanceTracker tagName={`ScreenB_Loaded_${navigationType}`} style={styles.container}>
-
-        <Text style={styles.title}>Screen B</Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleGoBack}
-        >
-          <Text style={styles.buttonText}>Go Back</Text>
-        </TouchableOpacity>
+      <Text style={styles.navType}>
+        {`NavigationType: ${navigationType === 'js' ? 'JS Stack Navigation' : 'Native Stack Navigation'}`}
+      </Text>
+      <Text style={styles.title}>Screen B</Text>
+      <Text style={styles.subtitle}>
+        This screen is used to benchmark navigation performance. Use the button below to go back to Screen A and measure transition times.
+      </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={handleGoBack}
+      >
+        <Text style={styles.buttonText}>Go to Screen A</Text>
+      </TouchableOpacity>
     </PerformanceTracker>
   );
 };
@@ -37,7 +42,6 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
   },
@@ -48,15 +52,30 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#007AFF',
-    padding: 15,
+    padding: 8,
     borderRadius: 8,
     marginVertical: 10,
     width: '80%',
   },
   buttonText: {
-    color: 'white',
+    color: 'black',
     textAlign: 'center',
     fontSize: 16,
     fontWeight: '600',
+  },
+  navType: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#007AFF',
+    marginBottom: 8,
+    marginTop: 8,
+    textAlign: 'center',
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#555',
+    marginBottom: 24,
+    textAlign: 'center',
+    paddingHorizontal: 10,
   },
 }); 
