@@ -11,17 +11,15 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
   const navigation = useNavigation<ScreenBNavigationProp>();
 
   useEffect(() => {
-    PerformanceTracker.track(`ScreenB_Mounted_${navigationType}`, Date.now());
-    PerformanceTracker.track(`Transition_A_to_B_End_${navigationType}`, Date.now());
+    PerformanceTracker.track(`Navigation_End`, Date.now());
   }, [navigationType]);
 
   const handleGoBack = () => {
-    PerformanceTracker.track(`Transition_B_to_A_Start_${navigationType}`, Date.now());
     navigation.navigate('ScreenA', { fromScreenB: true });
   };
 
   return (
-    <PerformanceTracker tagName={`ScreenB_Loaded_${navigationType}`} style={styles.container}>
+    <View style={styles.container}>
       <Text style={styles.navType}>
         {`NavigationType: ${navigationType === 'js' ? 'JS Stack Navigation' : 'Native Stack Navigation'}`}
       </Text>
@@ -35,7 +33,7 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
       >
         <Text style={styles.buttonText}>Go to Screen A</Text>
       </TouchableOpacity>
-    </PerformanceTracker>
+    </View>
   );
 };
 

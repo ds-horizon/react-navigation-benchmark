@@ -13,32 +13,31 @@ export const ScreenA = ({ navigationType }: { navigationType: 'js' | 'native' })
 
   useEffect(() => {
     if (route.params && (route.params as any).fromScreenB) {
-      PerformanceTracker.track(`${navigationType}_Transition_B_to_A_End`, Date.now());
       navigation.setParams({ fromScreenB: undefined });
     }
-    PerformanceTracker.track(`${navigationType}ScreenA_Mounted`, Date.now());
   }, [route.params, navigationType]);
 
   const handleNavigateToB = () => {
-    PerformanceTracker.track(`${navigationType}_Transition_A_to_B_Start`, Date.now());
+    PerformanceTracker.track('Navigation_Start', Date.now());
     navigation.navigate('ScreenB');
   };
 
   return (
-    <PerformanceTracker tagName={`${navigationType}_ScreenA_Loaded`} style={styles.container}>
-        <Text style={styles.navType}>
-          {`NavigationType: ${navigationType === 'js' ? 'JS Stack Navigation' : 'Native Stack Navigation'}`}</Text>
-        <Text style={styles.title}>Screen A</Text>
-        <Text style={styles.subtitle}>
-          This screen is used to benchmark navigation performance. Use the button below to navigate to Screen B and measure transition times.
-        </Text>
-        <TouchableOpacity
-          style={styles.button}
-          onPress={handleNavigateToB}
-        >
-          <Text style={styles.buttonText}>Go to Screen B</Text>
-        </TouchableOpacity>
-    </PerformanceTracker>
+    <View style={styles.container}>
+      <Text style={styles.navType}>
+        {`NavigationType: ${navigationType === 'js' ? 'JS Stack Navigation' : 'Native Stack Navigation'}`}
+      </Text>
+      <Text style={styles.title}>Screen A</Text>
+      <Text style={styles.subtitle}>
+        This screen is used to benchmark navigation performance. Use the button below to navigate to Screen B and measure transition times.
+      </Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={handleNavigateToB}
+      >
+        <Text style={styles.buttonText}>Go to Screen B</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
