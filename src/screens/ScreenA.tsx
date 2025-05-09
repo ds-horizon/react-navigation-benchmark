@@ -18,7 +18,7 @@ export const ScreenA = ({ navigationType }: { navigationType: 'js' | 'native' })
   }, [route.params, navigationType]);
 
   const handleNavigateToB = () => {
-    PerformanceTracker.track('Navigation_Start', Date.now());
+    PerformanceTracker.track('Start_Navigation', Date.now());
     navigation.navigate('ScreenB');
   };
 
@@ -80,4 +80,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 10,
   },
-}); 
+});

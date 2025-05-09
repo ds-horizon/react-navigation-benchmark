@@ -11,7 +11,7 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
   const navigation = useNavigation<ScreenBNavigationProp>();
 
   useEffect(() => {
-    PerformanceTracker.track(`Navigation_End`, Date.now());
+    PerformanceTracker.track('End_Navigation', Date.now());
   }, [navigationType]);
 
   const handleGoBack = () => {
