@@ -5,23 +5,34 @@
  * @format
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text, StyleSheet } from 'react-native';
-import { JSStackNavigator } from './src/navigation/JSStackNavigator';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { PerformanceTracker } from '@d11/marco';
+import { NativeStackNavigator } from './src/navigation/NativeStackNavigator';
+import { JSStackNavigator } from './src/navigation/JSStackNavigator';
 
 PerformanceTracker.configure({ persistToFile: true });
 
 const App = () => {
+  const useNativeNavigation = true
+
+
+
   return (
     <NavigationContainer>
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Navigation Benchmark</Text>
-          <Text style={styles.navType}>NavigationType: JS Stack Navigation</Text>
+          <Text style={styles.navType}>
+            NavigationType: {useNativeNavigation ? 'Native' : 'JS'} Stack Navigation
+          </Text>
         </View>
-        <JSStackNavigator navigationType="js" />
+        {useNativeNavigation ? (
+          <NativeStackNavigator navigationType="native" />
+        ) : (
+          <JSStackNavigator navigationType="js" />
+        )}
       </View>
     </NavigationContainer>
   );
@@ -46,6 +57,18 @@ const styles = StyleSheet.create({
     color: '#666',
     textAlign: 'center',
     marginBottom: 10,
+  },
+  button: {
+    backgroundColor: '#007AFF',
+    padding: 10,
+    borderRadius: 8,
+    marginTop: 10,
+  },
+  buttonText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: 16,
+    fontWeight: '600',
   },
 });
 
