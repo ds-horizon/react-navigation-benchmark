@@ -4,11 +4,11 @@ module.exports = {
     outputPath: './marco-reports/android',
     dataDir: [{
       path: './marco-reports/android/js_stack_navigation_release.json',
-      reportName: 'AndroidJSStackNavigation'
+      reportName: 'Android_JSStackNavigation'
     },
     {
         path: './marco-reports/android/native_stack_navigation_release.json',
-        reportName: 'AndroidNativeStackNavigation'
+        reportName: 'Android_NativeStackNavigation'
       }],
     port: '8080',
   },
@@ -21,4 +21,4 @@ module.exports = {
     }],
     port: '8080',
   }
-}; 
+};

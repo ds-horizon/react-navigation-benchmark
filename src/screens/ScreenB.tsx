@@ -10,16 +10,13 @@ type ScreenBNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Scre
 export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' }) => {
   const navigation = useNavigation<ScreenBNavigationProp>();
 
-  useEffect(() => {
-    PerformanceTracker.track('End_Navigation', Date.now());
-  }, [navigationType]);
 
   const handleGoBack = () => {
     navigation.navigate('ScreenA', { fromScreenB: true });
   };
 
   return (
-    <View style={styles.container}>
+    <PerformanceTracker tagName={'End_Navigation'} style={styles.container} >
       <Text style={styles.navType}>
         {`NavigationType: ${navigationType === 'js' ? 'JS Stack Navigation' : 'Native Stack Navigation'}`}
       </Text>
@@ -33,7 +30,7 @@ export const ScreenB = ({ navigationType }: { navigationType: 'js' | 'native' })
       >
         <Text style={styles.buttonText}>Go to Screen A</Text>
       </TouchableOpacity>
-    </View>
+    </PerformanceTracker>
   );
 };
 
@@ -76,4 +73,4 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingHorizontal: 10,
   },
-}); 
+});
