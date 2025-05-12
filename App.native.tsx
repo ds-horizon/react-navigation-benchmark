@@ -1,14 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text, StyleSheet } from 'react-native';
-import { JSStackNavigator } from './src/navigation/JSStackNavigator';
+import { NativeStackNavigator } from './src/navigation/NativeStackNavigator';
 import { PerformanceTracker } from '@d11/marco';
 
 PerformanceTracker.configure({ persistToFile: true });
@@ -19,9 +12,9 @@ const App = () => {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.title}>Navigation Benchmark</Text>
-          <Text style={styles.navType}>NavigationType: JS Stack Navigation</Text>
+          <Text style={styles.navType}>NavigationType: Native Stack Navigation</Text>
         </View>
-        <JSStackNavigator navigationType="js" />
+        <NativeStackNavigator navigationType="native" />
       </View>
     </NavigationContainer>
   );
@@ -49,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default App; 
