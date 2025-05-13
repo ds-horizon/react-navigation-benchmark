@@ -1,10 +1,10 @@
-appId: com.navigationbenchmark
+appId: org.reactjs.native.example.NavigationBenchmark
 ---
 - repeat:
-    times: 10
+    times: 50
     commands:
       - launchApp
       - assertVisible: "Navigation Benchmark"
       - assertVisible: "NavigationType: Native Stack Navigation"
       - tapOn: "Go to Screen B"
-      - assertVisible: "Screen B" 
+      - assertVisible: "ScreenB" 
