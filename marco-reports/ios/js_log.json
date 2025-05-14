@@ -1,0 +1,802 @@
+[
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142953006
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142954378
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142954398
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142954443
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142957798
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142959178
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142959193
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142959221
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142962399
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142963778
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142963795
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142963833
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142967024
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142968395
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142968413
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142968449
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142971615
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142973511
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142973530
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142973569
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142976709
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142978194
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142978210
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142978243
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142981401
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142982778
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142982796
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142982825
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142986045
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142987845
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142987864
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142987900
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142991067
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142993061
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142993079
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142993117
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747142996262
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747142997645
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747142997657
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747142997689
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143000840
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143002328
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143002345
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143002377
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143005553
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143006945
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143006963
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143007002
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143010254
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143011844
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143011862
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143011898
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143015075
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143016845
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143016862
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143016899
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143020201
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143021978
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143021996
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143022034
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143025303
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143027095
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143027111
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143027142
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143030310
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143032094
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143032109
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143032142
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143035399
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143036894
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143036907
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143036941
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143040153
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143041928
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143041946
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143041985
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143045190
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143046978
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143046995
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143047035
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143050211
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143052211
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143052230
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143052270
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143055460
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143056945
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143056963
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143056999
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143060158
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143061945
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143061962
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143062002
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143065162
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143066545
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143066563
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143066598
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143069753
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143071144
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143071161
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143071186
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143074357
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143076144
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143076155
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143076183
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143079353
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143080844
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143080861
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143080894
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143084070
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143085828
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143085845
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143085887
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143089090
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143090745
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143090763
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143090793
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143093962
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143095444
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143095463
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143095501
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143098796
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143100578
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143100596
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143100635
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143103793
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143105795
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143105812
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143105850
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143109108
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143110478
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143110495
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143110533
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143113703
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143115294
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143115312
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143115350
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143118502
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143119878
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143119896
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143119935
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143123087
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143124461
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143124479
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143124524
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143127539
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143128911
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143128929
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143128969
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143132127
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143133511
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143133530
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143133565
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143136733
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143138111
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143138129
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143138158
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143141185
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143142611
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143142628
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143142720
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143146064
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143147845
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143147863
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143147903
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143151256
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143152628
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143152645
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143152684
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143155855
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143157227
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143157240
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143157275
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143160310
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143161728
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143161742
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143161774
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143165057
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143166861
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143166879
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143166920
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143170086
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143171478
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143171497
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143171525
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143174730
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143176511
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143176530
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143176571
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143179857
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143181645
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143181662
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143181700
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143184984
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143186778
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143186795
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143186832
+  },
+  {
+    "tagName" : "AppLaunchStart",
+    "timestamp" : 1747143190014
+  },
+  {
+    "tagName" : "Start_Navigation",
+    "timestamp" : 1747143191811
+  },
+  {
+    "tagName" : "Component_B_Mounted",
+    "timestamp" : 1747143191829
+  },
+  {
+    "tagName" : "End_Navigation",
+    "timestamp" : 1747143191872
+  }
+]

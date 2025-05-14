@@ -5,9 +5,9 @@
  * @format
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { PerformanceTracker } from '@d11/marco';
 import { NativeStackNavigator } from './src/navigation/NativeStackNavigator';
 import { JSStackNavigator } from './src/navigation/JSStackNavigator';
@@ -15,7 +15,7 @@ import { JSStackNavigator } from './src/navigation/JSStackNavigator';
 PerformanceTracker.configure({ persistToFile: true });
 
 const App = () => {
-  const useNativeNavigation = true
+  const useNativeNavigation = false
 
 
 
