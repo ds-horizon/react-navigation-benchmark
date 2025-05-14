@@ -1,0 +1,10 @@
+appId: com.navigationbenchmark
+---
+- repeat:
+    times: 50
+    commands:
+      - launchApp
+      - assertVisible: "Navigation Benchmark"
+      - assertVisible: "NavigationType: Native Stack Navigation"
+      - tapOn: "Go to Screen B"
+      - assertVisible: "ScreenB"
