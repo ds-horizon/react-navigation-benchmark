@@ -2,14 +2,12 @@ module.exports = {
   android: {
     packageName: 'com.navigationbenchmark', // Update if your package name is different
     outputPath: './marco-reports/android',
-    dataDir: [{
-      path: './marco-reports/android/js_log.json',
-      reportName: 'Android_JSStackNavigation'
-    },
-    {
-        path: './marco-reports/android/native_log.json',
-        reportName: 'Android_NativeStackNavigation'
-      }],
+    dataDir: [
+      { path: './marco-reports/android/js_lowEndDeviceSimple.json', reportName: 'JS_Simple' },
+      { path: './marco-reports/android/native_lowEndDeviceSimple.json', reportName: 'Native_Simple' },
+      { path: './marco-reports/android/js_lowEndDeviceMedComplex.json', reportName: 'JS_Complex' },
+      { path: './marco-reports/android/native_lowEndDeviceMedComplex.json', reportName: 'Native_Complex' }
+    ],
     port: '8080',
   },
   ios: {
