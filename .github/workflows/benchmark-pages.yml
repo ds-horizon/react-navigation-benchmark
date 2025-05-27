@@ -31,8 +31,35 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run benchmark
-        run: yarn marco visualize --platform android
+      - name: Run benchmark and generate reports
+        run: |
+          # Start the command but kill it after a few seconds once files are generated
+          yarn marco visualize --platform android &
+          MARCO_PID=$!
+          
+          # Wait for files to be generated (adjust sleep time if needed)
+          sleep 10
+          
+          # Kill the serve process
+          kill $MARCO_PID || true
+          
+          # Kill any remaining serve processes
+          pkill -f "npx serve" || true
+
+      - name: Verify dist directory
+        run: |
+          if [ ! -d "node_modules/@d11/marco/web/dist" ]; then
+            echo "Dist directory not found"
+            exit 1
+          fi
+          if [ ! -d "node_modules/@d11/marco/web/dist/assets" ]; then
+            echo "Assets directory not found"
+            exit 1
+          fi
+          echo "Contents of dist directory:"
+          ls -la node_modules/@d11/marco/web/dist
+          echo "Contents of assets directory:"
+          ls -la node_modules/@d11/marco/web/dist/assets
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -40,7 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './node_modules/@d11/marco/web/dist'  # Updated path to the dist directory
+          path: './node_modules/@d11/marco/web/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
