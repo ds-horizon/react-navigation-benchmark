@@ -1445,9 +1445,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@d11/marco@npm:^0.0.9":
-  version: 0.0.9
-  resolution: "@d11/marco@npm:0.0.9"
+"@d11/marco@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@d11/marco@npm:0.0.11"
   dependencies:
     commander: "npm:^12.1.0"
     cosmiconfig: "npm:^9.0.0"
@@ -1457,7 +1457,7 @@ __metadata:
     react-native: "*"
   bin:
     marco: src/scripts/cli.js
-  checksum: 10c0/7b62e17febc4c68689f24c4b2b4ca7d16fcb1ae05eef7b3257181df93e7875e1f454fde0e611e1f35cd97be62860b6c8d713cfa5a513780d0853353e40a8766f
+  checksum: 10c0/2654a33ff9e677018c6550e26bbd8c4dc4d79fe4fd68b09baea73401d833b899cf6e68b934991d9cd50e02e29ebc80128b1169cc9ec7a80ac7e3f6bbc26aa4e3
   languageName: node
   linkType: hard
 
@@ -2911,7 +2911,7 @@ __metadata:
     "@babel/core": "npm:^7.25.2"
     "@babel/preset-env": "npm:^7.25.3"
     "@babel/runtime": "npm:^7.25.0"
-    "@d11/marco": "npm:^0.0.9"
+    "@d11/marco": "npm:^0.0.11"
     "@react-native-async-storage/async-storage": "npm:^2.1.2"
     "@react-native-community/cli": "npm:18.0.0"
     "@react-native-community/cli-platform-android": "npm:18.0.0"
