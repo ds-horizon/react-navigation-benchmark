@@ -1,50 +1,87 @@
 # React Navigation Benchmark
 
-This repository contains benchmarks comparing **`@react-navigation/stack`** (JavaScript-based Stack Navigator) vs **`@react-navigation/native-stack`** (native navigation powered by `react-native-screens`) using the [Marco benchmark tool](https://github.com/dream-sports-labs/marco).
-
-We have measured navigation performance from **Screen A** to **Screen B** under various screen complexities.
+This repository contains benchmarks comparing **`@react-navigation/stack`** [JavaScript-based Stack Navigator](https://reactnavigation.org/docs/stack-navigator) vs **`@react-navigation/native-stack`** [native navigation](https://reactnavigation.org/docs/native-stack-navigator) using the [Marco benchmark tool](https://github.com/dream-sports-labs/marco).
+We have measured navigation time between screens.
 
 ---
-
 ## 📊 Benchmark Details
 
-### Objective
+### 🔍 What We Measured
 
-To evaluate and compare the **navigation performance** of:
+#### **Navigation Time**
 
-- **`@react-navigation/native-stack`** – Native stack navigation
-- **`@react-navigation/stack`** – JavaScript-based stack navigation
+**Start Marker – Button onPress Event:**
 
-by measuring the **time taken to navigate from one screen to another** (Screen A ➡️ Screen B).
+* Navigation begins when the button is pressed on **Screen A**.
+* The timestamp is captured using a listener on the `onPress` event.
+* This timestamp is sent to [`PerformanceTracker.track()`](https://marco.dreamsportslabs.com/api/methods/) with a custom marker name (e.g., `"Start_Navigation"`).
+
+**End Marker – Screen B Render Completion:**
+
+* Navigation is considered complete when **Screen B** is fully rendered and visible.
+* We wrap **Screen B** with [`PerformanceTracker`](https://marco.dreamsportslabs.com/api/tracking-screen/) to capture the **onDraw** event, which marks the end of the transition.
+* This marks `"End_Navigation"` in the logs.
+
+📌 *These two markers allow Marco to calculate the time taken to complete the navigation between screens.*
 
 ---
 
-### 📍 How is it measured?
+### 📍 How It’s Measured
 
-We instrumented the navigation flow using **Marco Markers** with the following timestamps:
+We instrumented the navigation flow using **Marco Markers** at two key points:
 
-- **T0(Start_Navigation):** Time when the navigation button is pressed on **Screen A**
-- **T1(End_Navigation):** Time when the first render of **Screen B** component completes
+| Marker Name        | Description                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `Start_Navigation` | Captured when the navigation button is pressed on Screen A |
+| `End_Navigation`   | Captured when Screen B finishes rendering                  |
 
-The navigation duration is calculated as:  
-**Navigation Time = T1 - T0**
+🧾 **Navigation Time = `End_Navigation` - `Start_Navigation`**
 
 ---
 
 ## 📂 Benchmark Scenarios
 
-We tested the navigation stacks under different conditions:
+We tested navigation performance from **Screen A** to **Screen B** in two configurations:
 
-| Report Name    | Description                                                     |
-|----------------|-----------------------------------------------------------------|
-| JS_Simple      | JS Stack (`@react-navigation/stack`) - Simple Screen            |
-| Native_Simple  | Native Stack (`@react-navigation/native-stack`) - Simple Screen |
-| JS_Complex     | JS Stack - Complex Screen                                       |
-| Native_Complex | Native Stack - Complex Screen                                   |
+### ✅ Simple Screen B
 
-All benchmarks were run on **low-end Android device**.
+* Contains only a text element.
+
+### ✅ Complex Screen B
+
+Includes multiple interactive UI elements:
+
+* Header with title and navigation type info
+* Dark mode toggle
+* Search bar and loading indicator
+* Scrollable `FlatList` with selectable items
+* Stats section for selected items
+* A "Go Back" button
+
+| Report Name      | Description                                                     |
+| ---------------- | --------------------------------------------------------------- |
+| `JS_Simple`      | JS Stack (`@react-navigation/stack`) - Simple Screen            |
+| `Native_Simple`  | Native Stack (`@react-navigation/native-stack`) - Simple Screen |
+| `JS_Complex`     | JS Stack - Complex Screen                                       |
+| `Native_Complex` | Native Stack - Complex Screen                                   |
 
 ---
+<details>
+<summary>📱 Device Details</summary>
+
+These benchmarks were conducted on:
+
+### 🤖 Android (Real Device)
+- **Device:** Realme C35 (Low-end)
+- **OS:** Android 13
+- **RAM:** 4 GB
+
+### 🍏 iOS (Simulator)
+- **Device:** iPhone 16 Pro
+- **OS Version:** iOS 18.3
+
+</details>
+
 
 ### 📊 Android Benchmark Results (Simple Screens)
 
@@ -58,20 +95,26 @@ All benchmarks were run on **low-end Android device**.
 
 ---
 
-## 📦 Setup Instructions
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+<details>
+<summary>📦 Setup Instructions</summary>
 
-### Step 1: Clone project and Install Dependencies
+> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/environment-setup) guide before proceeding.
+
+---
+
+### 🔧 Step 1: Clone Project and Install Dependencies
 
 ```sh
 git clone https://github.com/dream-sports-labs/react-navigation-benchmark.git
-cd NavigationBenchmark
+cd react-navigation-benchmark
 yarn install
 ```
 
-### Step 2: Start Metro
+---
 
-Run the Metro dev server:
+### 🚀 Step 2: Start Metro
+
+Start the Metro bundler in one terminal:
 
 ```sh
 # Using npm
@@ -81,11 +124,13 @@ npm start
 yarn start
 ```
 
-### Step 2: Build and Run Your App
+---
 
-Open a new terminal and run:
+### 📱 Step 3: Build and Run the App
 
-#### Android
+Open a new terminal:
+
+#### ▶️ Android
 
 ```sh
 npm run android
@@ -93,16 +138,16 @@ npm run android
 yarn android
 ```
 
-#### iOS
+#### 🍏 iOS
 
-First install CocoaPods (only once):
+First install CocoaPods:
 
 ```sh
 bundle install
-bundle exec pod install
+cd ios && bundle exec pod install && cd ..
 ```
 
-Then run the app:
+Then run:
 
 ```sh
 npm run ios
@@ -110,27 +155,38 @@ npm run ios
 yarn ios
 ```
 
-### Step 3: Modify and Refresh
+---
 
-Modify `App.tsx`.
-Use `useNativeNavigation` flag to switch between js stack navigation and navtive stack navigation.
+### ✏️ Step 4: Modify and Refresh
+
+You can edit `App.tsx` and toggle the `useNativeNavigation` flag to switch between:
+
+- `@react-navigation/stack` (JS-based navigation)
+- `@react-navigation/native-stack` (Native stack navigation)
+
+This flag controls which navigator is rendered for benchmarking.
+
+</details>
+
 
 ## 📌 Run Benchmark with Maestro
 We are using the Marco tool to mark events and CLI tools provided by Marco to visualize the results.
 For more details refer: [Marco Documentation](https://marco.dreamsportslabs.com/)
 We use [Maestro](https://maestro.mobile.dev/) for scripting navigation interactions.
 
-### 1. Check Maestro Installation
-
-```sh
+### Prerequisite
+Ensure [Maestro](https://docs.maestro.dev/) is installed and accessible:
+```
 maestro -v
 ```
 
-### 2. Run Benchmark Test Scripts
+
+
+### 1. Run Benchmark Test Scripts
 
 #### Android
 
-```sh
+```
 # JS Stack
 maestro test .maestro/tests/AndroidScript/navigation-benchmark-js.yml
 
@@ -140,7 +196,7 @@ maestro test .maestro/tests/AndroidScript/navigation-benchmark-native.yml
 
 #### iOS
 
-```sh
+```
 # JS Stack
 maestro test .maestro/tests/iosScript/navigation-benchmark-js.yml
 
@@ -148,12 +204,11 @@ maestro test .maestro/tests/iosScript/navigation-benchmark-js.yml
 maestro test .maestro/tests/iosScript/navigation-benchmark-native.yml
 ```
 
----
 
-## 📊 Generate and Visualize Reports
-### Generate Reports
+### 2. Generate and Visualize Reports
+#### Generate Reports
 
-```sh
+```
 yarn marco generate --platform android
 yarn marco generate --platform ios
 ```
@@ -162,9 +217,9 @@ yarn marco generate --platform ios
 > - `marco-reports/ios/`
 
 
-### Visualize Reports
+#### Visualize Reports
 > 🛠️ Before visualization, ensure correct `path` and `reportName` are set in `marco.config.js`.
-```sh
+```
 yarn marco visualize --platform android
 yarn marco visualize --platform ios
 ```
