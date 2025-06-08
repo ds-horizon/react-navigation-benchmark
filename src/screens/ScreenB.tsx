@@ -13,7 +13,7 @@ import {
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
-import { PerformanceTracker } from '@d11/marco';
+import { PerformanceTracker } from '@wedesicooking/marco';
 
 type ScreenBNavigationProp = NativeStackNavigationProp<RootStackParamList, 'ScreenB'>;
 
