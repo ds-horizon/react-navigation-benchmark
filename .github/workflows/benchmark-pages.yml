@@ -48,18 +48,18 @@ jobs:
 
       - name: Verify dist directory
         run: |
-          if [ ! -d "node_modules/@wedesicooking/marco/web/dist" ]; then
+          if [ ! -d "node_modules/@d11/marco/web/dist" ]; then
             echo "Dist directory not found"
             exit 1
           fi
-          if [ ! -d "node_modules/@wedesicooking/marco/web/dist/assets" ]; then
+          if [ ! -d "node_modules/@d11/marco/web/dist/assets" ]; then
             echo "Assets directory not found"
             exit 1
           fi
           echo "Contents of dist directory:"
-          ls -la node_modules/@wedesicooking/marco/web/dist
+          ls -la node_modules/@d11/marco/web/dist
           echo "Contents of assets directory:"
-          ls -la node_modules/@wedesicooking/marco/web/dist/assets
+          ls -la node_modules/@d11/marco/web/dist/assets
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -67,7 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './node_modules/@wedesicooking/marco/web/dist'
+          path: './node_modules/@d11/marco/web/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment

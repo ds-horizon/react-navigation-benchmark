@@ -1445,6 +1445,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@d11/marco@npm:0.0.12":
+  version: 0.0.12
+  resolution: "@d11/marco@npm:0.0.12"
+  dependencies:
+    commander: ^12.1.0
+    cosmiconfig: ^9.0.0
+    serve: 14.2.4
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  bin:
+    marco: src/scripts/cli.js
+  checksum: 912392c378714f0a78998156a36967cffef4e2883b8d85e76063e11bdbd2b91a453cec8c3d803aee8dd778db5e7db183d3e1ef24f5b297a6a310c6480f5083c7
+  languageName: node
+  linkType: hard
+
 "@egjs/hammerjs@npm:^2.0.17":
   version: 2.0.17
   resolution: "@egjs/hammerjs@npm:2.0.17"
@@ -2881,22 +2897,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wedesicooking/marco@npm:^0.0.18":
-  version: 0.0.18
-  resolution: "@wedesicooking/marco@npm:0.0.18"
-  dependencies:
-    commander: ^12.1.0
-    cosmiconfig: ^9.0.0
-    serve: 14.2.4
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  bin:
-    marco: src/scripts/cli.js
-  checksum: 96dfc24a5913170e3baa30b2cc116ccabd957cb06baf461f40ecdd083c61f49573cb45b13966bd46138564717d98ffe36a9ffc015628e60f8879323b42d7f7d1
-  languageName: node
-  linkType: hard
-
 "@zeit/schemas@npm:2.36.0":
   version: 2.36.0
   resolution: "@zeit/schemas@npm:2.36.0"
@@ -2911,6 +2911,7 @@ __metadata:
     "@babel/core": ^7.25.2
     "@babel/preset-env": ^7.25.3
     "@babel/runtime": ^7.25.0
+    "@d11/marco": 0.0.12
     "@react-native-async-storage/async-storage": ^2.1.2
     "@react-native-community/cli": 18.0.0
     "@react-native-community/cli-platform-android": 18.0.0
@@ -2925,7 +2926,6 @@ __metadata:
     "@types/jest": ^29.5.13
     "@types/react": ^19.0.0
     "@types/react-test-renderer": ^19.0.0
-    "@wedesicooking/marco": ^0.0.18
     eslint: ^8.19.0
     jest: ^29.6.3
     prettier: 2.8.8
