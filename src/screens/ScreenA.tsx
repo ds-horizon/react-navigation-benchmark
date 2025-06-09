@@ -1,17 +1,15 @@
-import React, { useEffect, useRef } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, TextInput     } from 'react-native';
+import React, { useEffect } from 'react';
+import { View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
 import { PerformanceTracker } from '@d11/marco';
-import { getNodeFromPublicInstance } from 'react-native/Libraries/ReactPrivate/ReactNativePrivateInterface';
 
 type ScreenANavigationProp = NativeStackNavigationProp<RootStackParamList, 'ScreenA'>;
 
 export const ScreenA = ({ navigationType }: { navigationType: 'js' | 'native' }) => {
   const navigation = useNavigation<ScreenANavigationProp>();
   const route = useRoute();
-  const inputRef = useRef<TextInput>(null);
 
   useEffect(() => {
     if (route.params && (route.params as any).fromScreenB) {
@@ -33,29 +31,11 @@ export const ScreenA = ({ navigationType }: { navigationType: 'js' | 'native' })
       <Text style={styles.subtitle}>
         This screen is used to benchmark navigation performance. Use the button below to navigate to Screen B and measure transition times.
       </Text>
-      <TextInput
-        ref={inputRef}
-        style={styles.input}
-        placeholder="Enter your text"
-      />
       <TouchableOpacity
         style={styles.button}
         onPress={handleNavigateToB}
       >
         <Text style={styles.buttonText}>Go to Screen B</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => {
-          // inputRef.current?.focus();
-          const shadowNode = getNodeFromPublicInstance(inputRef.current);
-          console.log(shadowNode);
-
-          const measuredNode = globalThis.__measureNode(shadowNode);
-          console.log(JSON.stringify(measuredNode, null, 2));
-        }}
-      >
-        <Text style={styles.buttonText}>Test Measure</Text>
       </TouchableOpacity>
     </View>
   );
@@ -99,11 +79,5 @@ const styles = StyleSheet.create({
     marginBottom: 24,
     textAlign: 'center',
     paddingHorizontal: 10,
-  },
-  input: {
-    width: '80%',
-    height: 40,
-    borderWidth: 1,
-    borderColor: '#ccc',
   },
 });

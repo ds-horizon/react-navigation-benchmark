@@ -65,6 +65,9 @@ Includes multiple interactive UI elements:
 | `JS_Complex`     | JS Stack - Complex Screen                                       |
 | `Native_Complex` | Native Stack - Complex Screen                                   |
 
+
+🔗 **Live Benchmark Results:** [Click here](https://dream-sports-labs.github.io/react-navigation-benchmark/)
+
 ---
 <details>
 <summary>📱 Device Details</summary>
@@ -138,6 +141,8 @@ npm run android
 yarn android
 ```
 
+
+
 #### 🍏 iOS
 
 First install CocoaPods:
@@ -154,6 +159,8 @@ npm run ios
 # OR
 yarn ios
 ```
+
+<img src="./assets/app.gif" alt="Demo" width="300" />
 
 ---
 
