@@ -1,47 +1,41 @@
 # React Navigation Benchmark
 
-This repository contains benchmarks comparing **`@react-navigation/stack`** [JavaScript-based Stack Navigator](https://reactnavigation.org/docs/stack-navigator) vs **`@react-navigation/native-stack`** [native navigation](https://reactnavigation.org/docs/native-stack-navigator) using the [Marco benchmark tool](https://github.com/dream-sports-labs/marco).
-We have measured navigation time between screens.
+This repository presents a benchmark comparison between two popular navigators from the React Navigation ecosystem:
 
----
-## 📊 Benchmark Details
+- @react-navigation/stack: A JavaScript-based stack navigator
 
-### 🔍 What We Measured
+- @react-navigation/native-stack: A performant native stack navigator powered by react-native-screens
 
-#### **Navigation Time**
-
-**Start Marker – Button onPress Event:**
-
-* Navigation begins when the button is pressed on **Screen A**.
-* The timestamp is captured using a listener on the `onPress` event.
-* This timestamp is sent to [`PerformanceTracker.track()`](https://marco.dreamsportslabs.com/api/methods/) with a custom marker name (e.g., `"Start_Navigation"`).
-
-**End Marker – Screen B Render Completion:**
-
-* Navigation is considered complete when **Screen B** is fully rendered and visible.
-* We wrap **Screen B** with [`PerformanceTracker`](https://marco.dreamsportslabs.com/api/tracking-screen/) to capture the **onDraw** event, which marks the end of the transition.
-* This marks `"End_Navigation"` in the logs.
-
-📌 *These two markers allow Marco to calculate the time taken to complete the navigation between screens.*
+Using the Marco performance benchmarking tool, we've measured screen-to-screen navigation time to evaluate how each navigator performs under real-world conditions.
 
 ---
 
-### 📍 How It’s Measured
+##  Benchmarking Metrics
+- Navigation Time: Navigation time is measured from the moment a button is pressed on Screen A (Marker_Start) to when Screen B is rendered (Marker_End).
 
-We instrumented the navigation flow using **Marco Markers** at two key points:
-
-| Marker Name        | Description                                                |
-| ------------------ | ---------------------------------------------------------- |
-| `Start_Navigation` | Captured when the navigation button is pressed on Screen A |
-| `End_Navigation`   | Captured when Screen B finishes rendering                  |
-
-🧾 **Navigation Time = `End_Navigation` - `Start_Navigation`**
+<img src="./assets/Navigation_BN_Diagram.png" alt="Diagram" width="400" />
 
 ---
+
+### App Demo
+
+ <img src="./assets/app.gif" alt="Demo" width="300" />
+
+### Summary of Results
+- Android (RealDevice): Native Stack shows clear performance gains:
+
+  Simple: 73.1 ms → 43.7 ms (~40% faster)
+
+  Complex: 126.3 ms → 106.9 ms (~15% faster)
+
+- iOS (Simulator) : JS-based navigation is slightly faster, with performance nearly comparable to native.
+
+  Complex: 68.6 ms → 54.5 ms (~20.5% faster)
 
 ## 📂 Benchmark Scenarios
 
 We tested navigation performance from **Screen A** to **Screen B** in two configurations:
+
 
 ### ✅ Simple Screen B
 
@@ -66,7 +60,37 @@ Includes multiple interactive UI elements:
 | `Native_Complex` | Native Stack - Complex Screen                                   |
 
 
-🔗 **Live Benchmark Results:** [Click here](https://dream-sports-labs.github.io/react-navigation-benchmark/)
+###  What We Measured
+
+#### **Navigation Time**
+
+**Start Marker – Button onPress Event:**
+
+* Navigation begins when the button is pressed on **Screen A**.
+* The timestamp is captured using a listener on the `onPress` event.
+* This timestamp is sent to [`PerformanceTracker.track()`](https://marco.dreamsportslabs.com/api/methods/) with a custom marker name (e.g., `"Start_Navigation"`).
+
+**End Marker – Screen B Render Completion:**
+
+* Navigation is considered complete when **Screen B** is fully rendered and visible.
+* We wrap **Screen B** with [`PerformanceTracker`](https://marco.dreamsportslabs.com/api/tracking-screen/) to capture the **onDraw** event, which marks the end of the transition.
+* This marks `"End_Navigation"` in the logs.
+
+📌 *These two markers allow Marco to calculate the time taken to complete the navigation between screens.*
+
+---
+
+
+### 📍 How It’s Measured
+
+We instrumented the navigation flow using **Marco Markers** at two key points:
+
+| Marker Name        | Description                                                |
+| ------------------ | ---------------------------------------------------------- |
+| `Start_Navigation` | Captured when the navigation button is pressed on Screen A |
+| `End_Navigation`   | Captured when Screen B finishes rendering                  |
+
+🧾 **Navigation Time = `End_Navigation` - `Start_Navigation`**
 
 ---
 <details>
@@ -84,6 +108,16 @@ These benchmarks were conducted on:
 - **OS Version:** iOS 18.3
 
 </details>
+
+### Results
+| Navigator                                 | Android RealDevice (Simple) | Android RealDevice (Complex) | iOS Simulator (Complex) |
+| ----------------------------------------- |-----------------------------|--------------------|-------------------------|
+| `@react-navigation/stack` (JS)            | **73.1 ms**                 | **126.3 ms**       | **54.5 ms**             |
+| `@react-navigation/native-stack` (Native) | **43.7 ms**                 | **106.9 ms**       | **68.6 ms**             |
+
+
+
+🔗 **Live Benchmark Results:** [Click here](https://dream-sports-labs.github.io/react-navigation-benchmark/)
 
 
 ### 📊 Android Benchmark Results (Simple Screens)
@@ -159,8 +193,6 @@ npm run ios
 # OR
 yarn ios
 ```
-
-<img src="./assets/app.gif" alt="Demo" width="300" />
 
 ---
 
