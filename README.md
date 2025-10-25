@@ -117,7 +117,7 @@ These benchmarks were conducted on:
 
 
 
-🔗 **Live Benchmark Results:** [Click here](https://dream-sports-labs.github.io/react-navigation-benchmark/)
+🔗 **Live Benchmark Results:** [Click here](https://ds-horizon.github.io/react-navigation-benchmark/)
 
 
 ### 📊 Android Benchmark Results (Simple Screens)
@@ -142,7 +142,7 @@ These benchmarks were conducted on:
 ### 🔧 Step 1: Clone Project and Install Dependencies
 
 ```sh
-git clone https://github.com/dream-sports-labs/react-navigation-benchmark.git
+git clone https://github.com/ds-horizon/react-navigation-benchmark.git
 cd react-navigation-benchmark
 yarn install
 ```
